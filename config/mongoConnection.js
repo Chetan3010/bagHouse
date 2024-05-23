@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
+const config = require('config');
 
-mongoose.connect('mongodb://localhost:27017/scatch');
+mongoose.connect(`${config.get("MONGODB_URI")}/scatch`);
 
 const db = mongoose.connection;
 
-db.on('error', err => console.error)
+db.on('error', err => console.log(err))
 
 db.once('connected', () => console.log('Connected to MongoDB'));
 
