@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BagHouse</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="">
+    <nav class="w-full px-5 py-3 flex justify-between">
+        <a href="/shop" class="text-xl">BagHouse</a>
+        <% var isAuthenticated = typeof isAuthenticated !== 'undefined' ? isAuthenticated : true %>
+        <% if(isAuthenticated){ %>
+            <div class="flex gap-5">
+                <a href="/shop">Shop</a>
+                <a href="/cart">Cart</a>
+                <a href="">My account</a>
+                <a class="text-red-600" href="/account/logout">Logout</a>
+            </div>
+        <% } %>
+    </nav>

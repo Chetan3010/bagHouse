@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
-const config = require('config');
 
-mongoose.connect(`${config.get("MONGODB_URI")}/scatch`);
+const {MONGODB_USERNAME, MONGODB_PASSWORD} = process.env
+
+mongoose.connect(`mongodb+srv://${MONGODB_USERNAME}:${MONGODB_PASSWORD}@cluster0.mibuk.mongodb.net/baghouse`);
 
 const db = mongoose.connection;
 

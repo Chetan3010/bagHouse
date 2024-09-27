@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const ownerSchema = mongoose.Schema({
+const ownerSchema = new mongoose.Schema({
     fullname: {
         type: String,
         required: true,
@@ -15,6 +15,10 @@ const ownerSchema = mongoose.Schema({
     password: {
         type: String,
         required: true,
+    },
+    products: {
+        type: Array,
+        default: []
     },
     picture: String,
     gstin: String,
