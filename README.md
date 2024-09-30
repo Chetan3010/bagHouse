@@ -37,7 +37,7 @@ bagHouse is a demo e-commerce platform showcasing a variety of bags. Users can b
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/bagHouse.git
+   git clone https://github.com/Chetan3010/bagHouse.git
    cd bagHouse
    ```
 
